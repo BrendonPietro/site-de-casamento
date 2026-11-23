@@ -1,5 +1,9 @@
 # Site de casamento — Letícia & Brendon
 
+[![Testes](https://github.com/BrendonPietro/site-de-casamento/actions/workflows/tests.yml/badge.svg)](https://github.com/BrendonPietro/site-de-casamento/actions/workflows/tests.yml)
+
+🇺🇸 [English version](README.en.md)
+
 Site completo do nosso casamento, feito do zero e usado de verdade pelos convidados: convite, informações do evento, confirmação de presença, lista de presentes com pagamento online pelo Mercado Pago e um painel administrativo para os noivos acompanharem tudo.
 
 > Projeto pessoal publicado como portfólio. O evento já aconteceu e o site saiu do ar. Os dados de convidados neste repositório são **fictícios**.
