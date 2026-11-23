@@ -1,0 +1,243 @@
+// ============================================================================
+// Header
+// ============================================================================
+
+@use "../vars/" as *;
+
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	transition: background-color var(--t-fast);
+
+	&--scrolled {
+		background-color: rgba(53, 61, 40, 0.95);
+		backdrop-filter: blur(8px);
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 16px 24px;
+
+		@include mobile {
+			justify-content: space-between;
+			padding: 12px 16px;
+		}
+	}
+
+	&__mobile-logo {
+		display: none;
+
+		@include mobile {
+			display: block;
+		}
+
+		img {
+			height: 36px;
+			width: auto;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__link {
+		font-family: var(--fnt-1);
+		font-size: 0.7rem;
+		font-weight: var(--wgt-medium);
+		color: var(--c-s-1);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		text-decoration: none;
+		padding: 8px 0;
+		position: relative;
+		transition: opacity var(--t-fast);
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&--active {
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: var(--c-s-1);
+			}
+		}
+	}
+
+	// Mobile menu
+	&__mobile-toggle {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 8px;
+
+		@include mobile {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		span {
+			display: block;
+			width: 24px;
+			height: 2px;
+			background-color: var(--c-s-1);
+			transition: all var(--t-fast);
+		}
+	}
+
+	&__mobile-menu {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--c-bg-1);
+		z-index: 99;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 32px;
+
+		&.active {
+			display: flex;
+		}
+	}
+
+	&__mobile-link {
+		font-family: var(--fnt-1);
+		font-size: 1rem;
+		font-weight: var(--wgt-medium);
+		color: var(--c-s-1);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		text-decoration: none;
+	}
+
+	&__mobile-close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		background: none;
+		border: none;
+		color: var(--c-s-1);
+		font-size: 1.5rem;
+		cursor: pointer;
+		padding: 8px;
+	}
+
+	// Profile avatar (desktop)
+	&__profile {
+		position: relative;
+		margin-left: 16px;
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__avatar {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		border: 1.5px solid var(--c-s-1);
+		background: transparent;
+		color: var(--c-s-1);
+		font-family: var(--fnt-1);
+		font-size: 0.85rem;
+		font-weight: var(--wgt-semibold);
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: opacity var(--t-fast);
+		padding: 0;
+		line-height: 1;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__dropdown {
+		position: absolute;
+		top: calc(100% + 8px);
+		right: 0;
+		min-width: 190px;
+		background-color: var(--c-bg-7);
+		border-radius: 8px;
+		box-shadow: var(--fx-box-shadow-1);
+		overflow: hidden;
+		z-index: 101;
+
+		form {
+			margin: 0;
+		}
+
+		&-link {
+			display: block;
+			width: 100%;
+			padding: 12px 16px;
+			font-family: var(--fnt-1);
+			font-size: 0.75rem;
+			font-weight: var(--wgt-medium);
+			color: var(--c-s-4);
+			text-decoration: none;
+			text-align: left;
+			background: none;
+			border: none;
+			cursor: pointer;
+			transition: background-color var(--t-fast);
+
+			&:hover {
+				background-color: var(--c-bg-5);
+			}
+
+			&--danger {
+				color: var(--c-s-4);
+			}
+		}
+	}
+
+	// Mobile divider & logout
+	&__mobile-divider {
+		width: 40px;
+		height: 1px;
+		background: var(--c-s-1);
+		opacity: 0.3;
+	}
+
+	&__mobile-link--logout {
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: var(--c-s-1);
+		font-family: var(--fnt-1);
+		font-size: 1rem;
+		font-weight: var(--wgt-medium);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+	}
+}

@@ -1,0 +1,55 @@
+// ============================================================================
+// Footer
+// ============================================================================
+
+@use "../vars/" as *;
+
+.site-footer {
+	background-color: var(--c-bg-1);
+	color: var(--c-s-1);
+	padding: 60px 0 32px;
+	text-align: center;
+
+	@include mobile {
+		padding: 40px 0 24px;
+	}
+
+	&__monogram {
+		margin-bottom: 24px;
+
+		img {
+			width: 100px;
+			height: auto;
+			margin: 0 auto;
+			// Coloque a imagem do monograma/logo aqui
+		}
+	}
+
+	&__names {
+		font-family: var(--fnt-2);
+		font-size: 1.8rem;
+		color: var(--c-t1-100);
+		margin-bottom: 8px;
+	}
+
+	&__date {
+		font-family: var(--fnt-1);
+		font-size: 0.85rem;
+		color: var(--c-s-2);
+		letter-spacing: 0.1em;
+		margin-bottom: 32px;
+	}
+
+	&__divider {
+		width: 60px;
+		height: 1px;
+		background-color: var(--c-t1-700);
+		margin: 0 auto 24px;
+	}
+
+	&__copy {
+		font-size: 0.75rem;
+		color: var(--c-s-2);
+		opacity: 0.6;
+	}
+}

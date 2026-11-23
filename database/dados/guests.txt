@@ -1,0 +1,46 @@
+# ============================================================
+# CONVIDADOS - Preencha abaixo e salve
+# ============================================================
+#
+# Formato (uma linha por convidado):
+#   Nome Completo, Telefone, Email, Tipo
+#
+# Regras:
+#   - Telefone: só números (ex: 11900000000) ou deixe vazio
+#   - Email: email válido ou deixe vazio
+#   - Tipo: convidado | madrinha | padrinho | mae | pai | avo | ava | familiar
+#   - Se não colocar Tipo, assume "convidado"
+#   - Campos vazios: deixe em branco entre as vírgulas
+#   - Linhas que começam com # são ignoradas
+#   - A senha será gerada automaticamente (primeiros 4 dígitos do telefone ou nome minúsculo sem espaço)
+#
+# Exemplos:
+#   João da Silva, 11900000000, joao@email.com, padrinho
+#   Maria Souza, 11900000000, , madrinha
+#   Carlos Oliveira, , , pai
+#   Ana Santos, 11900000000, ana@email.com
+#   Pedro Lima, , ,
+#
+# ============================================================
+
+# Dados FICTÍCIOS para rodar o projeto localmente (a lista real de convidados não fica no repositório).
+
+# --- PADRINHOS E MADRINHAS ---
+Rafael Teixeira, 11900000001, , padrinho
+Camila Duarte, 11900000002, , madrinha
+Gustavo Nogueira, 11900000003, , padrinho
+Fernanda Albuquerque, 11900000004, , madrinha
+
+# --- FAMÍLIA ---
+Roberto Almeida, 11900000005, , pai
+Sônia Almeida, 11900000006, , mae
+Helena Carvalho, , , ava
+Marcos Almeida, 11900000007, , familiar
+
+# --- CONVIDADOS ---
+Juliana Prates, 11900000008, juliana@exemplo.com
+Thiago Prates, , ,
+Beatriz Lacerda, 11900000009, ,
+Eduardo Fontes, 11900000010, eduardo@exemplo.com
+Larissa Fontes, , ,
+Otávio Ribeiro, 11900000011, ,

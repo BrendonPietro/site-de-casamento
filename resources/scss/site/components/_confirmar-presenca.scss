@@ -1,0 +1,92 @@
+// ============================================================================
+// Confirmar Presença
+// ============================================================================
+
+@use "../vars/" as *;
+
+.confirmar-presenca {
+	background-color: var(--c-bg-3);
+	padding: 80px 0;
+
+	@include mobile {
+		padding: 48px 0;
+	}
+
+	&__title {
+		font-family: var(--fnt-2);
+		font-size: 3rem;
+		color: var(--c-t1-600);
+		text-align: left;
+		margin-bottom: 16px;
+		font-variant-ligatures: none;
+
+		@include mobile {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__description {
+		font-family: var(--fnt-1);
+		font-size: 1.3rem;
+		color: var(--c-s-3);
+		text-align: left;
+		line-height: 1.4;
+		margin-bottom: 10px;
+
+		@include mobile {
+			font-size: 1rem;
+		}
+
+		strong {
+			font-weight: var(--wgt-bold);
+			color: var(--c-s-4);
+		}
+	}
+
+	&__note {
+		font-family: var(--fnt-1);
+		font-size: 1.05rem;
+		font-style: italic;
+		color: var(--c-s-3);
+		text-align: left;
+		line-height: 1.4;
+		margin-top: 24px;
+
+		@include mobile {
+			font-size: 0.875rem;
+		}
+	}
+
+	&__cta {
+		margin-top: 50px;
+		text-align: center;
+
+		.btn-confirmar {
+			display: inline-block;
+			width: 40%;
+			padding: 18px 40px;
+
+			@include mobile {
+				width: 100%;
+			}
+			font-family: var(--fnt-1);
+			font-size: 0.85rem;
+			font-weight: var(--wgt-medium);
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			cursor: pointer;
+			transition: all var(--t-fast);
+			text-align: center;
+			text-decoration: none;
+			background-color: var(--c-t1-600);
+			border: 1px solid var(--c-t1-600);
+			color: var(--c-s-1);
+
+			&:hover {
+				background-color: transparent;
+				border-color: var(--c-s-4);
+				color: var(--c-s-4);
+			}
+		}
+	}
+}

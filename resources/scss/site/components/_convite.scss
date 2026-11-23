@@ -1,0 +1,70 @@
+// ============================================================================
+// Convite Virtual (seção do convite em PNG)
+// ============================================================================
+
+@use "../vars/" as *;
+
+.convite {
+	background-color: var(--c-bg-3);
+	padding: 20px 0;
+
+	/* @include mobile {
+		padding: 48px 0;
+	} */
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__description {
+		font-family: var(--fnt-1);
+		font-size: 1.4rem;
+		color: var(--c-s-3);
+		line-height: 1.4;
+		text-align: center;
+		margin: 0 0 24px;
+        width: 76%;
+
+		@include mobile {
+			font-size: 1rem;
+		}
+	}
+
+	&__image-wrapper {
+		width: 40%;
+		margin-top: 16px;
+
+		@include mobile {
+			width: 75%;
+		}
+	}
+
+	&__link {
+		display: block;
+		cursor: pointer;
+		text-align: center;
+		transition: transform var(--t-fast);
+
+		&:hover {
+			transform: scale(1.02);
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+		}
+	}
+
+	&__cta-text {
+		display: block;
+		margin-top: 16px;
+		font-family: var(--fnt-1);
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		color: var(--c-s-3);
+	}
+}

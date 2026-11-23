@@ -1,0 +1,155 @@
+// ============================================================================
+// Variáveis do Projeto - Letícia & Brendon
+// ============================================================================
+
+// Cores (Fundo):
+$c-backgrounds: (
+	"c-bg-1": #353D28,
+	"c-bg-2": #F5F1E6,
+	"c-bg-3": #f4f0e8,
+	"c-bg-4": #EEF4E7,
+	"c-bg-5": #DCE7D1,
+	"c-bg-6": #8D9284,
+    "c-bg-7": #fffdf9,
+    "c-bg-8": #f7f5ef,
+    "c-bg-9": #f8f6f1,
+);
+
+// Cores (Texto):
+$c-strings: (
+	"c-s-1": #F7FAF5,
+	"c-s-2": #DCE7D1,
+	"c-s-3": #545E43,
+	"c-s-4": #414B33,
+);
+
+// Cores (Surface):
+$c-surfaces: (
+	"c-surf-1": #353D28,
+);
+
+// Cores (Tema):
+$c-themes: (
+	"c-t1-050": #F7FAF5,
+	"c-t1-100": #EEF4E7,
+	"c-t1-200": #DCE7D1,
+	"c-t1-300": #B4CCA3,
+	"c-t1-400": #8EA87A,
+	"c-t1-500": #6A7D55,
+	"c-t1-600": #414B33,  // Main
+	"c-t1-700": #545E43,
+	"c-t1-800": #3A442F,
+	"c-t1-900": #333C2B,
+	"c-t1-950": #2A3224,
+);
+
+// Cores (Bordas):
+$c-borders: (
+	"c-border-1": #EEF4E7,
+	"c-border-2": #DCE7D1,
+	"c-border-3": #B4CCA3,
+    "c-border-4": #d9dccf,
+);
+
+// Cores (Indicadores):
+$c-indicators: (
+	"c-success": #5CE06A,
+	"c-alert": #E0CB5C,
+	"c-error": #CF6679,
+	"c-disabled": #999999,
+);
+
+// Efeitos:
+$visual-effects: (
+	"fx-box-shadow-1": (rgba(0, 0, 0, 0.24) 0px 3px 8px),
+	"fx-box-shadow-2": (0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)),
+	"fx-text-shadow-1": (2px 2px 4px rgba(0, 0, 0, 0.5)),
+);
+
+// Fontes:
+$fonts: (
+	"fnt-1": ("Lora", serif),
+	"fnt-2": ("Parfumerie Script Text"),
+);
+
+// Transições:
+$transitions: (
+	"t-fast": 0.3s,
+	"t-normal": 0.5s,
+	"t-slow": 0.7s,
+);
+
+// Font Weights:
+$font-weights: (
+	"wgt-regular": 400,
+	"wgt-medium": 500,
+	"wgt-semibold": 600,
+	"wgt-bold": 700,
+);
+
+// Breakpoints:
+$breakpoint-mobile: 768px;
+$breakpoint-desktop: 1024px;
+
+// Mixins:
+@mixin mobile {
+	@media (max-width: #{$breakpoint-mobile - 1}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$breakpoint-desktop}) {
+		@content;
+	}
+}
+
+// CSS Custom Properties:
+:root {
+    --site-header-height: 68px;
+    --site-footer-height: 335px;
+
+    @media (max-width: 767px) {
+        --site-header-height: 60px;
+        --site-footer-height: 300px;
+    }
+	// Backgrounds
+	@each $name, $value in $c-backgrounds {
+		--#{$name}: #{$value};
+	}
+
+	// Strings
+	@each $name, $value in $c-strings {
+		--#{$name}: #{$value};
+	}
+
+	// Surfaces
+	@each $name, $value in $c-surfaces {
+		--#{$name}: #{$value};
+	}
+
+	// Themes
+	@each $name, $value in $c-themes {
+		--#{$name}: #{$value};
+	}
+
+	// Borders
+	@each $name, $value in $c-borders {
+		--#{$name}: #{$value};
+	}
+
+	// Fonts
+	@each $name, $value in $fonts {
+		--#{$name}: #{$value};
+	}
+
+	// Font Weights
+	@each $name, $value in $font-weights {
+		--#{$name}: #{$value};
+	}
+
+	// Transitions
+	@each $name, $value in $transitions {
+		--#{$name}: #{$value};
+	}
+}

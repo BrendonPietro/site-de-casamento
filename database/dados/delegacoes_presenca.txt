@@ -1,0 +1,35 @@
+# ============================================================
+# DELEGAÇÕES DE PRESENÇA - Preencha abaixo e salve
+# ============================================================
+#
+# Formato (uma linha por delegação):
+#   Nome do Responsável, Nome do Dependente
+#   ou: ID_Responsável, ID_Dependente, Nome do Responsável, Nome do Dependente
+#
+# Regras:
+#   - Use o nome exatamente como está em guests.txt
+#   - O responsável é quem pode confirmar presença pelo dependente
+#   - Para delegação mútua, crie duas linhas (A,B e B,A)
+#   - Se usar IDs, os nomes no final são opcionais e servem só para conferência
+#   - Linhas que começam com # são ignoradas
+#   - Linhas que começam com -- são ignoradas
+#   - Campos vazios são ignorados
+#
+# Exemplos:
+#   Rafael Teixeira, Camila Duarte
+#   Camila Duarte, Rafael Teixeira
+#   Sônia Almeida, Roberto Almeida
+#
+# ============================================================
+
+# Dados FICTÍCIOS (combinam com database/dados/guests.txt).
+
+Rafael Teixeira, Camila Duarte
+Camila Duarte, Rafael Teixeira
+Roberto Almeida, Sônia Almeida
+Sônia Almeida, Roberto Almeida
+Roberto Almeida, Helena Carvalho
+Juliana Prates, Thiago Prates
+Thiago Prates, Juliana Prates
+Eduardo Fontes, Larissa Fontes
+Larissa Fontes, Eduardo Fontes

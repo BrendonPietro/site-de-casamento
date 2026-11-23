@@ -1,0 +1,154 @@
+// ============================================================================
+// Login Modal
+// ============================================================================
+
+@use "../vars/" as *;
+
+[x-cloak] {
+	display: none !important;
+}
+
+.login-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+	}
+
+	&__content {
+		position: relative;
+		background: var(--c-bg-7);
+		border-radius: 12px;
+		padding: 40px;
+		max-width: 400px;
+		width: 90%;
+		box-shadow: var(--fx-box-shadow-1);
+
+		@include mobile {
+			padding: 32px 24px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 12px;
+		right: 16px;
+		background: none;
+		border: none;
+		font-size: 1.3rem;
+		color: var(--c-s-4);
+		cursor: pointer;
+		padding: 8px;
+		line-height: 1;
+	}
+
+	&__title {
+		font-family: var(--fnt-2);
+		font-size: 1.8rem;
+		color: var(--c-s-4);
+		text-align: center;
+		margin-bottom: 4px;
+	}
+
+	&__subtitle {
+		font-family: var(--fnt-1);
+		font-size: 0.8rem;
+		color: var(--c-s-3);
+		text-align: center;
+		margin-bottom: 28px;
+	}
+
+	&__field {
+		margin-bottom: 16px;
+	}
+
+	&__label {
+		display: block;
+		font-family: var(--fnt-1);
+		font-size: 0.7rem;
+		font-weight: var(--wgt-medium);
+		color: var(--c-s-4);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 6px;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 10px 14px;
+		font-family: var(--fnt-1);
+		font-size: 0.9rem;
+		color: var(--c-s-4);
+		background: var(--c-bg-3);
+		border: 1px solid var(--c-border-2);
+		border-radius: 6px;
+		outline: none;
+		transition: border-color var(--t-fast);
+		box-sizing: border-box;
+
+		&:focus {
+			border-color: var(--c-t1-500);
+		}
+
+		&::placeholder {
+			color: var(--c-s-3);
+			opacity: 0.6;
+		}
+	}
+
+	&__error {
+		font-family: var(--fnt-1);
+		font-size: 0.8rem;
+		color: var(--c-error);
+		margin-bottom: 12px;
+		text-align: center;
+	}
+
+	&__submit {
+		width: 100%;
+		padding: 12px;
+		font-family: var(--fnt-1);
+		font-size: 0.85rem;
+		font-weight: var(--wgt-semibold);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--c-s-1);
+		background: var(--c-bg-1);
+		border: none;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: opacity var(--t-fast);
+		margin-top: 8px;
+
+		&:hover {
+			opacity: 0.85;
+		}
+
+		&:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+	}
+
+	&__hint {
+		font-family: var(--fnt-1);
+		font-size: 0.7rem;
+		color: var(--c-s-3);
+		text-align: center;
+		margin-top: 16px;
+		opacity: 0.7;
+	}
+}

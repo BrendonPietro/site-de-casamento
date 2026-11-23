@@ -1,0 +1,92 @@
+# ============================================================
+# PRESENTES - Preencha abaixo e salve
+# ============================================================
+#
+# Formato (uma linha por presente):
+#   Nome, Descrição, R$ Valor, Cotável, Num Cotas, Categoria, fav
+#
+# Regras:
+#   - Valor: formato brasileiro (ex: R$ 150,00)
+#   - Cotável: "Cotável" ou omita
+#   - Número de Cotas: só preencha se Cotável
+#   - Categoria: Eletrodoméstico | Louça | Limpeza | Geral
+#   - Favorito: adicione "fav" no final para marcar como favorito
+#   - Descrição: pode deixar vazia
+#   - Linhas que começam com # são ignoradas
+#
+# Exemplos:
+#   Jogo de Panelas, Conjunto 5 peças, R$ 450,00, Louça
+#   Geladeira Brastemp, , R$ 3.200,00, Cotável, 20, Eletrodoméstico, fav
+#   Kit Toalhas, Jogo 8 peças Buddemeyer, R$ 290,00, Geral
+#
+# ============================================================
+
+# --- PRESENTES COTÁVEIS (valor alto, dividido em cotas) ---
+Lava e seca LG, Lava e Seca LG Smart VC4 12kg Titanium com Inteligência Artificial, R$  4.655,00, Cotável, 10, Eletrodoméstico, fav
+Televisão Samsung, Vision AI TV 43 polegadas QLED 4K, R$  2.100,00, Cotável, 8, Eletrodoméstico, fav
+Ar Condicionado Samsung, Ar-condicionado Split Inverter 9000 Btus Samsung Windfree, R$  2.000,00, Cotável, 8, Eletrodoméstico, fav
+
+
+# --- ELETRODOMÉSTICOS ---
+Chaleira elétrica, Gooseneck Electric Kettle Smart Temperature Control, R$  192,00, Eletrodoméstico
+Chaleira elétrica, Electrolux Efficient EEK10 Aço Inox Escovado 1,8L, R$  135,00, Eletrodoméstico
+Batedeira Philco, Batedeira Planetária Philco PBP90A 5L 900W, R$  310,00, Eletrodoméstico
+Panela de pressão elétrica Electrolux, Panela de Pressão Elétrica Electrolux Experience por Rita Lobo 6L Inox - PCC20,  R$  490,00, Eletrodoméstico
+Umidificador de ar Elgin, Umidificador De Ar Digital Touch 4 Litros Elgin Cromoterapia Cor Branco 110/220, R$  160,00, Eletrodoméstico
+Aspirador de pó Electrolux, Electrolux, Aspirador pó vertical com fio portátil de mão 2 em 1 potente 1450W cabo 6m capacidade 1,6L filtro HEPA Electrolux STK15, R$  190,00, Eletrodoméstico
+Ferro de passar Electrolux, Ferro de Passar Seco e vapor Electrolux antiaderente base ceramica vapor vertical extra 1500W azul marinho ESI60, R$  199,00, Eletrodoméstico
+Torradeira Electrolux, Torradeira tostador 8 niveis de tostagem ETS10, R$  150,00, Eletrodoméstico
+Sanduicheira Oster, Sanduicheira Mini Grill Oster Inox 2 Em 1 Ogrl230 1000w, R$  150,00, Eletrodoméstico
+Microondas MONDIAL, Micro-ondas 34L Mondial Espelhado, R$  576,00, Eletrodoméstico
+Air fryer Electrolux, Air Fryer Electrolux por Rita Lobo 5,6L Digital Cinza Experience, R$  365,00, Eletrodoméstico
+Máquina de café Philco, Cafeteira Expresso Philco, R$  589,00, Eletrodoméstico
+Ferro de passar a vapor, , Eletrodoméstico
+Liquidificado, , Eletrodoméstico
+Robo aspirador Xiaomi , Robô Aspirador Xiaomi S40, R$  1.320,00, Eletrodoméstico
+Mixer Oster, Oster Mixer Power Black Inox 3 em 1 127V, R$  300,00, Eletrodoméstico
+Máquina de waffle Oster, Máquina de Waffle Perform 180, Preto, 110v, R$  179,00, Eletrodoméstico
+
+
+# --- LOUÇA (panelas, talheres, copos, utensílios de cozinha) ---
+Jogo de talheres, Tramontina Faqueiro Tramontina Zurique em Aço Inox, R$  900,00, Louça
+Petisqueira, Kit Tábua Para Queijos e Frios com Petisqueira, Facas, Garfos, Potes e Bandeja de Bambu, R$  150,00, Louça
+Jogo travessas Lyor, Travessa E Assadeira Refratárias Alça 3un Porcelana Branca Branco, R$  298,00, Louça
+Jogo assadeiras Tramontina, Kit 4 Assadeiras Tramontina Antiaderente Brasil Rasa E Funda Grafite, R$  255,00, Louça
+Jogo de sobremesa, Conjunto de Taças de Vidro Caneladas, Design Elegante, 310ml, para Sobremesa, R$  120,00, Louça
+Jogo de taças Crystalex, Jogo de 6 tacas para vinho branco Xtra em cristal ecologico 360ml A23,5cm, R$  145,00, Louça
+Jarra de vidro, Jarra de Vidro Borossilicato 1,5L com Tampa de Bambu, R$  65,00, Louça
+Jogo de Faca Tramontina, Jogo de Facas Tramontina Plenus, R$  145,00, Louça
+Faca do Cheff Tramontina, Faca Chef Tramontina Century, R$  389,00, Louça
+Jogo de panelas Brinox, Jogo de Panelas Brinox Antiaderente Ceramic Life 6 Peças Sirius, R$  900,00, Louça
+Frigideira Paula Souza, Frigideira 28cm Inox Corpo Triplo Paula Souza, R$  380,00, Louça
+Jogo de tappaware, , Louça
+Aparelho de jantar Camicado, Jogo de Jantar 30 Peças Off White Porto Brasil Cerâmica, R$  940,00, Louça
+Panela Le Creuset, Le Creuset Panela Redonda Signature 20cm, R$  2.329,00, Louça, fav
+Mantegueira Francesa, Mantegueira Francesa, R$  80,00, Louça
+Escorredor de louça, , Louça
+Abridor de Massa, Maquina Macarrão Massa Manual, R$  100,00, Louça
+Pilao, Pilão Com Fita De Cobre Em Pedra Sabão, R$  60,00, Louça
+Boleira, Boleira Porta Bolo Com Tampa Em Acrílico E Bandeja Bambu, R$  150,00, Louça
+Tábua de corte Camicado, Tábua Home Style Chevron Acácia 40 cm x 30 cm, R$  99,90, Louça
+Jarra medidora Camicado, Jarra Medidora Home Style Simplice 1 Litro, R$  59,90, Louça
+Jogo de moedor de sal e pimenta Camicado, Jogo de Moedor de Sal e Pimenta Home Style Acácia, R$  139,90, Louça
+
+
+# --- LIMPEZA ---
+Lixeira para cozinha, Lixeira com pedal com duplo compartimento Ou 30L Linha Trium, R$  199,00, Limpeza
+Mop spray Flash Limp, Mop Spray FIT com reservatório 365ml, R$  79,00, Limpeza
+
+
+# --- GERAL (cama, mesa, banho, organização) ---
+Kit porta mantimentos, 11 Porta Mantimentos Herméticos Vidro Bambu Silicone Premium, R$  180,00, Geral
+Organizadores geladeira, Kit 5 Organizadores de Geladeira, Hermético,com Escorredor,Cesto Removível, R$  175,00, Geral
+Jogo de toalhas Buddemeyer, Jogo De Banho Buddemeyer - Toalha Fio Penteado Canelado - 100% Algodão - Kit Banho e Rosto - 4 Peças, R$  265,00, Geral
+Jogo de cama Zelo, Jogo de Cama Zelo Queen - 100% Algodão, R$  350,00, Geral
+Cesto de Roupas, Cesto De Roupa Suja, R$  158,00, Geral
+Colcha Karsten, Colcha Queen com 2 Porta-travesseiros 100% Algodão, R$  620,00, Geral
+CobertorZelo, Coberdrom Dupla Face Liso Queen, R$  320,00, Geral
+Jogo de pano de prato Camicado, Jogo de Pano de Prato Home Style Drai, R$  80,00, Geral
+Lata para pão, Casa Riachuelo Lata para pão Belinda 33,5x16cm, R$  120,00, Geral
+Lata para café, Casa Riachuelo Lata para café Lauren 11x11cm, R$  59,90, Geral
+Caixa para chá, Casa Riachuelo Caixa organizadora para chá Louis 22,7cm, R$  89,90, Geral
+Jogo porta copos, Casa Riachuelo Jogo porta-copos 6 peças de bambu Nathan 10cm bege, R$  69,90, Geral

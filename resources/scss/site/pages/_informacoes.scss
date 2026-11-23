@@ -1,0 +1,56 @@
+// ============================================================================
+// Página: Informações
+// ============================================================================
+
+@use "../vars/" as *;
+
+.page-informacoes {
+	// Estilos específicos para a página informações, se necessário
+}
+
+// Hero banner modifier for informações page
+.hero-banner--info {
+	height: 50vh;
+	min-height: 350px;
+
+	@include mobile {
+		height: 40vh;
+		min-height: 280px;
+	}
+
+	&__overlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 80px;
+
+		@include mobile {
+			padding: 0 32px;
+		}
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__title {
+		font-family: var(--fnt-2);
+		font-size: 3.5rem;
+		color: var(--c-bg-7);
+        font-weight: 500;
+
+		@include mobile {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__subtitle {
+		font-family: var(--fnt-1);
+		font-size: 0.85rem;
+		font-style: italic;
+		color: var(--c-bg-7);
+		letter-spacing: 0.1em;
+		margin-top: 8px;
+		line-height: 1.5;
+	}
+}

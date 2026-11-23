@@ -1,0 +1,67 @@
+// ============================================================================
+// Buttons - Letícia & Brendon
+// ============================================================================
+
+@use "../vars/" as *;
+
+.btn {
+	display: inline-block;
+	padding: 14px 40px;
+	font-family: var(--fnt-1);
+	font-size: 0.85rem;
+	font-weight: var(--wgt-medium);
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	border-radius: 0;
+	cursor: pointer;
+	transition: all var(--t-fast);
+	text-align: center;
+	text-decoration: none;
+
+	&-primary {
+		@extend .btn;
+		background-color: var(--c-t1-600);
+		border: 1px solid var(--c-t1-600);
+		color: var(--c-s-1);
+
+		&:hover {
+			background-color: var(--c-t1-800);
+			border-color: var(--c-t1-800);
+		}
+
+		&--unavailable {
+			opacity: 0.4;
+			cursor: not-allowed;
+			pointer-events: none;
+
+			&:hover {
+				background-color: var(--c-t1-600);
+				border-color: var(--c-t1-600);
+			}
+		}
+	}
+
+	&-outline {
+		@extend .btn;
+		background-color: transparent;
+		border: 1px solid var(--c-s-4);
+		color: var(--c-s-4);
+
+		&:hover {
+			background-color: var(--c-s-4);
+			color: var(--c-s-1);
+		}
+
+		&--light {
+			@extend .btn;
+			background-color: transparent;
+			border: 1px solid var(--c-s-1);
+			color: var(--c-s-1);
+
+			&:hover {
+				background-color: var(--c-s-1);
+				color: var(--c-s-4);
+			}
+		}
+	}
+}

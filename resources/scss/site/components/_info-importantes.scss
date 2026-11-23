@@ -1,0 +1,119 @@
+// ============================================================================
+// Informações Importantes
+// ============================================================================
+
+@use "../vars/" as *;
+
+.info-importantes {
+	background-color: var(--c-t1-600);
+	padding-bottom: 80px;
+
+	@include mobile {
+		padding-bottom: 48px;
+	}
+
+	&__header {
+		position: relative;
+		background-color: var(--c-bg-3);
+		margin-bottom: 40px;
+		font-size: 0; // remove inline gap below img
+
+		@include mobile {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__arc {
+		width: 100%;
+		height: auto;
+		display: block;
+		vertical-align: baseline;
+	}
+
+	&__header-inner {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		padding-top: 85px;
+
+		@include mobile {
+			padding-top: 32px;
+		}
+	}
+
+	&__title {
+		font-family: var(--fnt-1);
+		font-size: 1.5rem;
+		font-weight: var(--wgt-bold);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		color: var(--c-s-1);
+
+		@include mobile {
+			font-size: 1rem;
+		}
+	}
+
+	&__list {
+		max-width: 700px;
+		padding: 0;
+		list-style: none;
+
+		@include mobile {
+			padding: 0;
+		}
+	}
+
+	&__item {
+		font-family: var(--fnt-1);
+		font-size: 0.95rem;
+		color: var(--c-s-1);
+		line-height: 1.6;
+		padding: 0 0 20px;
+		padding-left: 20px;
+		position: relative;
+		max-width: 700px;
+
+		&::before {
+			content: '•';
+			position: absolute;
+			left: 0;
+			color: var(--c-s-1);
+		}
+	}
+
+	&__cta {
+		margin-top: 40px;
+		text-align: center;
+	}
+
+	&__btn {
+		display: inline-block;
+		width: 40%;
+		padding: 18px 40px;
+		font-family: var(--fnt-1);
+		font-size: 0.85rem;
+		font-weight: var(--wgt-medium);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		cursor: pointer;
+		transition: all var(--t-fast);
+		text-align: center;
+		text-decoration: none;
+		background-color: var(--c-bg-3);
+		border: 1px solid var(--c-bg-3);
+		color: var(--c-t1-600);
+		border-radius: 999px;
+
+		@include mobile {
+			width: 100%;
+		}
+
+		&:hover {
+			background-color: var(--c-s-1);
+			border-color: var(--c-s-1);
+			color: var(--c-t1-600);
+		}
+	}
+}

@@ -1,0 +1,459 @@
+// ============================================================================
+// Confirmação de Presença (Página dedicada)
+// ============================================================================
+
+@use "../vars/" as *;
+
+// ——— Toggle Componente ———
+
+.rsvp-toggle {
+	--toggle-track-off: rgba(73, 89, 51, 0.20);
+	--toggle-track-on: var(--c-t1-500);
+	--toggle-thumb: #ffffff;
+	--toggle-label: var(--c-s-2);
+
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 16px;
+	cursor: pointer;
+	user-select: none;
+	min-width: 290px;
+	flex-shrink: 0;
+
+	@include mobile {
+		width: 100%;
+		min-width: 0;
+		justify-content: space-between;
+		gap: 14px;
+	}
+
+	input[type="checkbox"] {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+		pointer-events: none;
+	}
+
+	&__label {
+		font-family: var(--fnt-1);
+		font-size: 1.2rem;
+		line-height: 1.3;
+		color: var(--c-s-3);
+		text-align: right;
+
+		@include mobile {
+			font-size: 0.9rem;
+			text-align: left;
+		}
+	}
+
+	&__track {
+		position: relative;
+		flex-shrink: 0;
+		width: 60px;
+		height: 34px;
+		border-radius: 999px;
+		background-color: var(--toggle-track-off);
+		transition:
+			background-color var(--t-fast),
+			border-color var(--t-fast),
+			box-shadow var(--t-fast);
+
+		&--on {
+			background-color: var(--toggle-track-on);
+		}
+	}
+
+	&__thumb {
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		background-color: var(--toggle-thumb);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+		transition: transform var(--t-fast);
+	}
+
+	// Estado visual dirigido pelo :checked nativo — funciona mesmo se o
+	// Alpine não carregar (a classe --on continua valendo quando ele roda).
+	input:checked + .rsvp-toggle__label + .rsvp-toggle__track {
+		background-color: var(--toggle-track-on);
+	}
+
+	input:checked + .rsvp-toggle__label + .rsvp-toggle__track .rsvp-toggle__thumb {
+		transform: translateX(26px);
+	}
+
+	&--light {
+		--toggle-track-off: rgba(255, 255, 255, 0.20);
+		--toggle-track-on: rgba(255, 255, 255, 0.30);
+		--toggle-thumb: #ffffff;
+		--toggle-label: var(--c-s-1);
+
+		.rsvp-toggle__label {
+			color: var(--c-s-1);
+		}
+	}
+}
+
+// ——— Seção Confirmação de Presença ———
+
+.confirmacao-presenca {
+	background: var(--c-bg-3);
+	padding: 80px 0 40px;
+
+	@include mobile {
+		padding: 48px 0 24px;
+	}
+
+	&__shell {
+		position: relative;
+		// background: rgba(255, 255, 255, 0.30);
+		// border: 1px solid rgba(73, 89, 51, 0.10);
+		// border-radius: 28px;
+		// padding: 56px;
+		// box-shadow: 0 20px 50px rgba(54, 48, 39, 0.06);
+
+		@include mobile {
+			padding: 28px 20px;
+			border-radius: 20px;
+		}
+	}
+
+	&__header {
+		max-width: 760px;
+		margin-bottom: 36px;
+
+		@include mobile {
+			margin-bottom: 28px;
+		}
+	}
+
+	&__title {
+		font-family: var(--fnt-2);
+		font-size: 3.45rem;
+		line-height: 1;
+		color: var(--c-t1-600);
+		margin-bottom: 18px;
+		font-variant-ligatures: none;
+
+		@include mobile {
+			font-size: 2.25rem;
+			margin-bottom: 14px;
+		}
+	}
+
+	&__desc {
+		font-family: var(--fnt-1);
+		font-size: 1.2rem;
+		color: var(--c-s-3);
+		line-height: 1.8;
+		max-width: 650px;
+		margin-bottom: 22px;
+
+		@include mobile {
+			font-size: 1rem;
+			line-height: 1.7;
+			margin-bottom: 18px;
+		}
+
+		strong {
+			font-weight: var(--wgt-semibold);
+			color: var(--c-s-4);
+		}
+	}
+
+	&__deadline {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		padding: 14px 22px;
+		border: 1px solid rgba(73, 89, 51, 0.18);
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.46);
+
+		@include mobile {
+			padding: 12px 18px;
+			gap: 10px;
+		}
+	}
+
+	&__deadline-icon {
+		font-size: 1rem;
+		line-height: 1;
+		color: var(--c-t1-600);
+	}
+
+	&__deadline-text {
+		font-family: var(--fnt-1);
+		font-size: 1rem;
+		font-weight: var(--wgt-medium);
+		letter-spacing: 0.02em;
+		color: var(--c-t1-600);
+	}
+
+	&__feedback {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-family: var(--fnt-1);
+		font-size: 0.95rem;
+		padding: 14px 18px;
+		border-radius: 14px;
+		margin-bottom: 24px;
+
+		&--success {
+			background-color: rgba(73, 89, 51, 0.08);
+			border: 1px solid rgba(73, 89, 51, 0.14);
+			color: var(--c-t1-600);
+
+			&::before {
+				content: "✓";
+				font-weight: var(--wgt-bold);
+			}
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+
+	&__card {
+		background: rgba(255, 255, 255, 0.55);
+		border: 1px solid rgba(73, 89, 51, 0.08);
+		border-radius: 24px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(54, 48, 39, 0.05);
+
+		@include mobile {
+			border-radius: 18px;
+		}
+	}
+
+	&__grupo {
+		padding: 30px 30px 10px;
+
+		@include mobile {
+			padding: 22px 18px 8px;
+		}
+
+		&--separado {
+			border-top: 1px solid rgba(73, 89, 51, 0.10);
+		}
+	}
+
+	&__grupo-head {
+		margin-bottom: 18px;
+	}
+
+	&__grupo-titulo {
+		font-family: var(--fnt-1);
+		font-size: 0.96rem;
+		font-weight: var(--wgt-medium);
+		text-transform: uppercase;
+		letter-spacing: 0.18em;
+		color: var(--c-t1-600);
+		margin-bottom: 8px;
+
+		@include mobile {
+			font-size: 0.88rem;
+		}
+	}
+
+	&__grupo-desc {
+		font-family: var(--fnt-1);
+		font-size: 1rem;
+		color: var(--c-s-3);
+		line-height: 1.65;
+		max-width: 560px;
+	}
+
+	&__pessoa {
+		display: grid;
+		grid-template-columns: 64px minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 18px;
+		padding: 20px 0;
+		border-top: 1px solid rgba(73, 89, 51, 0.08);
+
+		@include mobile {
+			grid-template-columns: 52px minmax(0, 1fr);
+			gap: 14px;
+		}
+
+		.rsvp-toggle {
+			@include mobile {
+				grid-column: 1 / -1;
+				padding-top: 4px;
+			}
+		}
+	}
+
+	&__pessoa-controls {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 10px;
+
+		@include mobile {
+			grid-column: 1 / -1;
+			align-items: flex-start;
+		}
+	}
+
+	&__pessoa-avatar {
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		border: 1px solid rgba(73, 89, 51, 0.20);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: var(--fnt-1);
+		font-size: 1.55rem;
+		color: var(--c-t1-500);
+		background: rgba(255, 255, 255, 0.45);
+		letter-spacing: 0.04em;
+
+		@include mobile {
+			width: 52px;
+			height: 52px;
+			font-size: 1.2rem;
+		}
+	}
+
+	&__pessoa-info {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		min-width: 0;
+	}
+
+	&__pessoa-nome {
+		font-family: var(--fnt-1);
+		font-size: 1.34rem;
+		font-weight: var(--wgt-medium);
+		color: var(--c-s-4);
+		line-height: 1.2;
+
+		@include mobile {
+			font-size: 1.08rem;
+		}
+	}
+
+	&__pessoa-tipo {
+		font-family: var(--fnt-1);
+		font-size: 0.95rem;
+		font-style: italic;
+		color: var(--c-s-3);
+		text-transform: capitalize;
+
+		@include mobile {
+			font-size: 0.85rem;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: center;
+		margin-top: -4px;
+	}
+}
+
+// ——— Número do Calçado (convidadas femininas) ———
+
+.rsvp-shoe-size {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	&__label {
+		font-family: var(--fnt-1);
+		font-size: 0.82rem;
+		color: var(--c-t1-500);
+		white-space: nowrap;
+	}
+
+	&__stepper {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		border: none;
+		background: transparent;
+		color: var(--c-t1-500);
+		font-size: 1.3rem;
+		line-height: 1;
+		cursor: pointer;
+		padding: 0;
+		transition: color var(--t-fast), transform var(--t-fast);
+
+		&:hover {
+			color: var(--c-t1-700);
+			transform: scale(1.15);
+		}
+
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+
+	&__value {
+		font-family: var(--fnt-1);
+		font-size: 1rem;
+		font-weight: var(--wgt-medium);
+		color: var(--c-t1-600);
+		min-width: 24px;
+		text-align: center;
+	}
+}
+
+.confirmacao-presenca {
+	.btn-presenca {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 420px;
+		padding: 18px 48px;
+		font-family: var(--fnt-1);
+		font-size: 0.92rem;
+		font-weight: var(--wgt-medium);
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		cursor: pointer;
+		transition: all var(--t-fast);
+		text-align: center;
+		text-decoration: none;
+		background-color: var(--c-t1-600);
+		border: 1px solid var(--c-t1-600);
+		color: var(--c-s-1);
+		border-radius: 6px;
+
+		@include mobile {
+			width: 100%;
+			min-width: 0;
+			padding: 16px 24px;
+			font-size: 0.85rem;
+		}
+
+		&:hover {
+			background-color: transparent;
+			border-color: var(--c-s-4);
+			color: var(--c-s-4);
+		}
+	}
+}

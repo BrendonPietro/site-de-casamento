@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Pseudo-Classes WPF3</title>
+</head>
+<body>
+    <!-- Teste básico: hover:opacity-0.8 deve gerar CSS para .opacity-0\.8 { opacity: 0.8; } -->
+    <div class="hover:opacity-0.8">Hover para opacidade 0.8</div>
+    
+    <!-- Teste com breakpoint: mob:hover:p-20px -->
+    <div class="mob:hover:p-20px">Mobile hover padding</div>
+    
+    <!-- Teste com importância: hover:fs-16px! -->
+    <div class="hover:fs-16px!">Hover font-size important</div>
+    
+    <!-- Teste classe sem pseudo -->
+    <div class="fs-16px">Font-size 16px</div>
+    
+    <!-- Teste focus -->
+    <input class="focus:b-2px-solid" placeholder="Focus border" />
+    
+    <!-- Teste active -->
+    <button class="active:scale-0.95">Active scale</button>
+    
+    <!-- Teste group-hover -->
+    <div class="group">
+        <div class="group-hover:t-center">Group hover center</div>
+    </div>
+    
+    <!-- Teste placeholder -->
+    <input class="placeholder:opacity-0.6" placeholder="Placeholder opacity" />
+    
+    <!-- Teste remote-hover com dp-flex -->
+    <div class="remote-hover:dp-flex">Remote hover display</div>
+</body>
+</html>

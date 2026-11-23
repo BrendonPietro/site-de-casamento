@@ -1,0 +1,73 @@
+// ============================================================================
+// Lista de Presentes Mobile CTA
+// ============================================================================
+
+@use "../vars/" as *;
+
+.lista-presentes-mobile {
+	display: none;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 75%;
+		height: 1px;
+		background: linear-gradient(to right, transparent, rgba(65, 75, 51, 0.6) 30%, rgba(65, 75, 51, 0.6) 70%, transparent);
+	}
+
+	@include mobile {
+		display: block;
+		background-color: var(--c-bg-3);
+		padding: 48px 0;
+	}
+
+	&__title {
+		font-family: var(--fnt-2);
+		font-size: 1.8rem;
+		color: var(--c-t1-600);
+		text-align: left;
+		margin-bottom: 16px;
+	}
+
+	&__description {
+		font-family: var(--fnt-1);
+		font-size: 1rem;
+		color: var(--c-s-3);
+		text-align: left;
+		line-height: 1.4;
+		margin-bottom: 10px;
+	}
+
+	&__cta {
+		margin-top: 50px;
+		text-align: center;
+
+		.btn-presentes {
+			display: inline-block;
+			width: 100%;
+			padding: 18px 40px;
+			font-family: var(--fnt-1);
+			font-size: 0.85rem;
+			font-weight: var(--wgt-medium);
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			cursor: pointer;
+			transition: all var(--t-fast);
+			text-align: center;
+			text-decoration: none;
+			background-color: var(--c-t1-600);
+			border: 1px solid var(--c-t1-600);
+			color: var(--c-s-1);
+
+			&:hover {
+				background-color: transparent;
+				border-color: var(--c-s-4);
+				color: var(--c-s-4);
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+// ============================================================================
+// Nomes do Casal (Letícia & Brendon - seção com nome em Parfumerie)
+// ============================================================================
+
+@use "../vars/" as *;
+
+.nomes-casal {
+	background-color: var(--c-bg-3);
+	padding: 20px 0;
+	text-align: center;
+
+	@include mobile {
+		padding: 48px 0;
+	}
+
+	&__names {
+		font-family: var(--fnt-2);
+        font-weight: 500;
+		font-size: 7rem;
+		color: var(--c-t1-600);
+		line-height: 1.2;
+
+		@include mobile {
+			font-size: 4rem;
+            padding-bottom: 10px;
+		}
+	}
+
+	&__subtitle {
+		font-family: var(--fnt-1);
+		font-size: 1rem;
+		color: var(--c-s-3);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		margin-bottom: 16px;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+
+        /* @include mobile {
+			font-size: 1rem;
+		} */
+	}
+
+	&__description {
+		font-family: var(--fnt-1);
+		font-size: 1.1rem;
+		color: var(--c-s-4);
+		line-height: 1.4;
+		margin: 0 auto;
+
+		@include mobile {
+			font-size: 1rem;
+		}
+	}
+}

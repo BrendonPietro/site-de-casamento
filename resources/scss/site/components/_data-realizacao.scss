@@ -1,0 +1,117 @@
+// ============================================================================
+// Data de Realização (seção com imagem de fundo + data do casamento)
+// ============================================================================
+
+@use "../vars/" as *;
+
+.data-realizacao {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+
+    @include mobile {
+        height: 350px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.5) 0%,
+                    rgba(0, 0, 0, 0.5) 20%,
+                    rgba(0, 0, 0, 0) 40%);
+        }
+    }
+
+        &__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        &__overlay {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 100%;
+            padding: 60px 80px;
+
+            @include mobile {
+                padding: 40px 24px;
+                align-items: flex-end;
+            }
+        }
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__label {
+            font-family: var(--fnt-1);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--c-s-1);
+            margin-bottom: 16px;
+        }
+
+        &__date {
+            font-family: var(--fnt-1);
+            font-size: 4rem;
+            font-weight: var(--wgt-regular);
+            color: var(--c-s-1);
+            line-height: 1.2;
+
+            @include mobile {
+                font-size: 3rem;
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            min-width: 200px;
+
+            @include mobile {
+                min-width: 120px;
+            }
+        }
+
+        &__venue {
+            font-family: var(--fnt-1);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--c-s-1);
+            margin-bottom: 12px;
+            white-space: nowrap;
+        }
+
+        &__line {
+            width: calc(100% + 80px);
+            height: 1px;
+            background-color: var(--c-s-1);
+            margin-right: -80px;
+
+            @include mobile {
+                width: calc(100% + 24px);
+                margin-right: -24px;
+            }
+        }
+    }

@@ -1,0 +1,224 @@
+// ============================================================================
+// Serviço de Van
+// ============================================================================
+
+@use "../vars/" as *;
+
+.servico-van {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(73, 89, 51, 0.03) 100%),
+		var(--c-bg-6);
+	padding: 64px 0 80px;
+
+	@include mobile {
+		padding: 40px 0 48px;
+	}
+
+	&__shell {
+		position: relative;
+		padding: 0;
+	}
+
+	&__header {
+		max-width: 760px;
+		margin-bottom: 34px;
+
+		@include mobile {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__title {
+		font-family: var(--fnt-2);
+		font-size: 3rem;
+		line-height: 1;
+		color: var(--c-s-1);
+		margin-bottom: 18px;
+
+		@include mobile {
+			font-size: 2rem;
+			margin-bottom: 14px;
+		}
+	}
+
+	&__desc {
+		font-family: var(--fnt-1);
+		font-size: 1.2rem;
+		color: var(--c-s-1);
+		line-height: 1.8;
+		max-width: 650px;
+		margin-bottom: 14px;
+
+		@include mobile {
+			font-size: 1rem;
+			line-height: 1.7;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__feedback {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-family: var(--fnt-1);
+		font-size: 0.95rem;
+		padding: 14px 18px;
+		border-radius: 14px;
+		margin-bottom: 24px;
+
+		&--success {
+			background-color: rgba(255, 255, 255, 0.10);
+			color: var(--c-s-1);
+			border: 1px solid rgba(255, 255, 255, 0.16);
+
+			&::before {
+				content: "✓";
+				font-weight: var(--wgt-bold);
+			}
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+
+	&__card {
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		border-radius: 24px;
+		overflow: hidden;
+
+		@include mobile {
+			border-radius: 18px;
+		}
+	}
+
+	&__grupo {
+		padding: 8px 30px;
+
+		@include mobile {
+			padding: 4px 18px;
+		}
+	}
+
+	&__pessoa {
+		display: grid;
+		grid-template-columns: 64px minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 18px;
+		padding: 22px 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		@include mobile {
+			grid-template-columns: 52px minmax(0, 1fr);
+			gap: 14px;
+		}
+
+		.rsvp-toggle {
+			@include mobile {
+				grid-column: 1 / -1;
+				padding-top: 4px;
+			}
+		}
+	}
+
+	&__pessoa-avatar {
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		border: 1px solid rgba(255, 255, 255, 0.32);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: var(--fnt-1);
+		font-size: 1.55rem;
+		color: var(--c-s-1);
+		background: rgba(255, 255, 255, 0.04);
+		letter-spacing: 0.04em;
+
+		@include mobile {
+			width: 52px;
+			height: 52px;
+			font-size: 1.2rem;
+		}
+	}
+
+	&__pessoa-info {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		min-width: 0;
+	}
+
+	&__pessoa-nome {
+		font-family: var(--fnt-1);
+		font-size: 1.34rem;
+		font-weight: var(--wgt-medium);
+		color: var(--c-s-1);
+		line-height: 1.2;
+
+		@include mobile {
+			font-size: 1.08rem;
+		}
+	}
+
+	&__pessoa-tipo {
+		font-family: var(--fnt-1);
+		font-size: 0.95rem;
+		font-style: italic;
+		color: rgba(255, 255, 255, 0.82);
+		text-transform: capitalize;
+
+		@include mobile {
+			font-size: 0.85rem;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: center;
+	}
+
+	.btn-van {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 420px;
+		padding: 18px 48px;
+		font-family: var(--fnt-1);
+		font-size: 0.92rem;
+		font-weight: var(--wgt-medium);
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		cursor: pointer;
+		transition: all var(--t-fast);
+		text-align: center;
+		text-decoration: none;
+		background-color: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.55);
+		color: var(--c-s-1);
+		border-radius: 6px;
+
+		@include mobile {
+			width: 100%;
+			min-width: 0;
+			padding: 16px 24px;
+			font-size: 0.85rem;
+		}
+
+		&:hover {
+			background-color: var(--c-s-1);
+			border-color: var(--c-s-1);
+			color: var(--c-t1-600);
+		}
+	}
+}

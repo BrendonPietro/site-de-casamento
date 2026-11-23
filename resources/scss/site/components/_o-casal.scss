@@ -1,0 +1,142 @@
+// ============================================================================
+// O Casal (seção com fotos em carrossel)
+// ============================================================================
+
+@use "../vars/" as *;
+
+.o-casal {
+	position: relative;
+	padding: 80px 0;
+	overflow: hidden;
+
+	// Fundo com duas cores (verde + creme)
+	// A parte creme é ancorada no fundo com altura fixa para que o carrossel
+	// sempre fique cortado ao meio, independente da altura do conteúdo de texto.
+	&--bg-split {
+		background:
+			linear-gradient(var(--c-bg-2), var(--c-bg-2)) bottom / 100% 370px no-repeat,
+			var(--c-bg-1);
+
+		@include mobile {
+			background:
+				linear-gradient(var(--c-bg-2), var(--c-bg-2)) bottom / 100% 288px no-repeat,
+				var(--c-bg-1);
+		}
+	}
+
+	// Fundo invertido (creme em cima, verde embaixo)
+	&--bg-split-bottom {
+		padding-top: 0;
+		background: linear-gradient(
+			to bottom,
+			var(--c-bg-2) 0%,
+			var(--c-bg-2) 50%,
+			var(--c-bg-1) 50%,
+			var(--c-bg-1) 100%
+		);
+	}
+
+	@include mobile {
+		padding: 48px 0;
+	}
+
+	&__title {
+		font-family: var(--fnt-2);
+		font-size: 3rem;
+		color: var(--c-bg-7);
+		text-align: left;
+        margin-bottom: 20px;
+
+        span {
+            color: var(--c-s-4);
+        }
+
+		@include mobile {
+			font-size: 1.8rem;
+			margin-bottom: 12px;
+		}
+	}
+
+	&__description {
+		font-family: var(--fnt-1);
+		font-size: 1.3rem;
+		color: var(--c-bg-7);
+		text-align: left;
+		margin: 0 0 48px;
+		line-height: 1.4;
+
+        span {
+            color: var(--c-s-4);
+        }
+
+		@include mobile {
+			font-size: 1rem;
+			margin-bottom: 32px;
+		}
+	}
+
+	// Swiper always visible (desktop + mobile)
+	&__swiper {
+		display: block;
+		overflow: hidden;
+
+		.swiper {
+			overflow: hidden;
+			padding-bottom: 40px;
+			max-width: 900px;
+			margin: 0 auto;
+			height: 540px;
+
+			@include mobile {
+				height: 440px;
+			}
+		}
+
+		.swiper-wrapper {
+			align-items: flex-end;
+		}
+
+		.swiper-slide {
+			height: 350px;
+			border-radius: 4px;
+			transition: height var(--t-fast), opacity var(--t-fast);
+
+			@include mobile {
+				height: 280px;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				display: block;
+				border-radius: 4px;
+			}
+		}
+
+		// Active (center) slide is larger
+		.swiper-slide-active {
+			height: 500px;
+			opacity: 1;
+
+			@include mobile {
+				height: 400px;
+			}
+		}
+
+		.swiper-pagination {
+			position: relative;
+			margin-top: 24px;
+		}
+
+		.swiper-pagination-bullet {
+			background-color: var(--c-s-2);
+			opacity: 0.5;
+
+			&-active {
+				background-color: var(--c-t1-600);
+				opacity: 1;
+			}
+		}
+	}
+}
