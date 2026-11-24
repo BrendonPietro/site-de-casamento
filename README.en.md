@@ -8,6 +8,16 @@ The complete website for our wedding, built from scratch and actually used by ou
 
 > Personal project published as a portfolio piece. The wedding has already happened and the site is offline. The guest data in this repository is **fictional**.
 
+## Screenshots
+
+The home page:
+
+<p align="center"><img src="docs/prints/home.jpg" alt="Home page" width="800"></p>
+
+Guest login and the site on a phone:
+
+<p align="center"><img src="docs/prints/login.jpg" alt="Guest login" width="560">&nbsp;&nbsp;<img src="docs/prints/celular.jpg" alt="Site on a phone" width="200"></p>
+
 ## Features
 
 - **Guest area:** each guest signs in with their own login and sees personalized content.
