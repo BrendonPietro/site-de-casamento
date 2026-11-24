@@ -8,6 +8,16 @@ Site completo do nosso casamento, feito do zero e usado de verdade pelos convida
 
 > Projeto pessoal publicado como portfólio. O evento já aconteceu e o site saiu do ar. Os dados de convidados neste repositório são **fictícios**.
 
+## Telas
+
+A página inicial do site:
+
+<p align="center"><img src="docs/prints/home.jpg" alt="Página inicial" width="800"></p>
+
+O login do convidado e o site no celular:
+
+<p align="center"><img src="docs/prints/login.jpg" alt="Login do convidado" width="560">&nbsp;&nbsp;<img src="docs/prints/celular.jpg" alt="Site no celular" width="200"></p>
+
 ## O que o site faz
 
 - **Área do convidado:** cada convidado entra com o próprio login e vê o conteúdo personalizado.
